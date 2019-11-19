@@ -7,6 +7,7 @@ session_start();
 <html>
 <head>
 	<title>Piéger dans l'index</title>
+	<link href="https://fonts.googleapis.com/css?family=Calligraffitti|Faster+One&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style.php">
 </head>
 <body>
@@ -82,8 +83,8 @@ else
 		}
 
 		if(isset($_SESSION['login']))
-		{	echo"<div class=\"lien-bout ac bon\">connécté : ".$_SESSION['login']."</div><form method=\"post\" action=\"index.php\">
-							<input class=\"lien-bout\" type=\"submit\" name=\"mod\" value=\"modifier profile\">
+		{	echo"<div class=\"lien-bout ac bon\">connécté :<br>".$_SESSION['login']."</div><form method=\"post\" action=\"index.php\">
+							<input class=\"lien-bout\" type=\"submit\" name=\"mod\" value=\"modifier\">
 						</form>
 					<form method=\"post\" action=\"index.php\">
 							<input class=\"lien-bout\" type=\"submit\" name=\"destroy\" value=\"deconexion\">
@@ -104,16 +105,25 @@ else
 				}
 					
 				
-					$niv="niv ".$_SESSION['game'];	
+					$niv="niv ".$_SESSION['game'];
+					if($_SESSION['game']>10)
+					{
+						$niv="WINER !!!";
+					}	
 				
 				echo "	<main>
-						<p>Grab the kebab $niv </p>
+						<p>Grab  The  Kebab : $niv </p>
 						<div id=\"jeu-div\">
 
 							<form method=\"post\" action=\"index.php\">
 								<input id=\"jeu\" type=\"submit\" name=\"lejeu\" >
 							</form>
 							
+						</div>
+						<div id=\"div-win\">
+							<h>Merci Chef</h>
+							<img src=\"image/win.gif\" >  
+
 						</div>
 					</main>
 					";

@@ -60,7 +60,7 @@
 			$meserr='ce login est deja pris !';
 		}
 		}
-		echo "<div class=\"lien-bout ac bon\">connécté : ".$_SESSION['login']."</div> <a class=\"lien-bout ac \" href=\"index.php\">acceuille</a> <form method=\"post\" action=\"index.php\"><input class=\"lien-bout ac \" type=\"submit\" name=\"destroy\" value=\"deconexion\"></form></header>";
+		echo "<div class=\"lien-bout ac bon\">connécté : ".$_SESSION['login']."</div> <a class=\"lien-bout ac \" href=\"index.php\">accueil</a> <form method=\"post\" action=\"index.php\"><input class=\"lien-bout ac \" type=\"submit\" name=\"destroy\" value=\"deconexion\"></form></header>";
 		 ?>
 
 	<form class="form-ins" action="index.php" method="post">
@@ -77,7 +77,7 @@
 	<?php 
 	if(isset($meserr))
 	{
-		echo $meserr;  
+		echo "<u>".$meserr."</u>";  
 	}
 	?>
 

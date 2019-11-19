@@ -1,17 +1,36 @@
 <?php 
 	session_start();
 
+function topbot()
+	{
+		$top=random_int(0, 250);
+		$bot=random_int(0, 700);
+		
+		echo "top: ".$top."px; left: ".$bot."px;";
+	}
 
-if(isset($_SESSION['login']))
+$disp="block;";
+$dispwin ="none;";
+
+$niveau=$_SESSION['game'];
+$seconde=9-$niveau;
+if($niveau==9)
 {
-	$r='red';
+	$seconde=0.8;
 }
-else{
-	$r='pink';
+if($niveau==10)
+{
+	$seconde=0.7;
 }
-var_dump($_SESSION['login']);
+if($niveau>10)
+{	$dispwin ="flex;";
+	$disp="none;";
+}
 header('content-type: text/css'); 
+
+
 ?>
+@import url('https://fonts.googleapis.com/css?family=Calligraffitti|Faster+One&display=swap');
 
 @keyframes rotation {
   from {transform: rotate3d(1, 1, 1, -120deg);}
@@ -24,10 +43,10 @@ body{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background-color: <?php echo $r;?>;  /*#1AEB77*/;
+	background-color: #dcb48e;
 }
 header{
-	background-color: #3CB826;
+	background-color: #dc1d1d;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
@@ -40,14 +59,17 @@ header{
 }
 .lien-bout{
 	border:none;
-	height: 80px;
+	height: 70px;
 	width: 110px;
-    background-color: #991AEB;
+    background-color: #fed500;
     color: white;
     text-align: center;
-    box-shadow: 3px 3px 6px darkgrey;
+    box-shadow: 3px 3px 6px black;
     animation: rotation 0.7s 1;
     transition: transform 1s;
+    font-family: 'Faster One', cursive;
+    text-shadow: 1px 1px 1px black;
+    border-radius: 15%;
 }
 
 .lien-bout:hover{
@@ -61,24 +83,28 @@ header{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-family: 'Faster One', cursive;
 }
 .bon{
-	background-color: #B459C1;
+	background-color: #8ea709;
 }
 
 .val{
 	border:none;
-    background-color: #991AEB;
+    background-color: #8ea709;
     color: white;
     text-align: center;
-    box-shadow: 3px 3px 6px darkgrey;
+    box-shadow: 3px 3px 6px black;
     animation: rotation 0.7s 1;
     transition: transform 1s;
+    font-family: 'Faster One', cursive;
+    text-shadow: 1px 1px 1px black;
+    height: 25px;
 }
 b{
 	position: absolute;
-    top: 45px;
-    left: 220px;
+    top: 70px;
+    left: 275px;
 }
 #connexion{
 	display: flex;
@@ -88,6 +114,10 @@ main{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin-bottom: 4%;
+}
+p{
+	font-family: 'Faster One', cursive;
 }
 .form-ins{
 
@@ -97,27 +127,40 @@ main{
 	animation: rotation 0.7s 1;
 
 }
+u{color:red;}
 footer{
 	padding-top:2%;
 	padding-bottom: 2%; 
 	text-align: center;
-	position: absolute; 
-	bottom: 0;
 	width: 100%;
-	background-color: #3CB826;
+	background-color: #dc1d1d;
+	font-family: 'Faster One', cursive;
 }
 
 #jeu-div
 {
-	background-color: red;
+	background-image: url('image/<?php echo $_SESSION['game'] ;?>.jpg');
+    background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100%;
     width: 800px;
     height: 350px;
+    display: <?php echo $disp ;?>
+
 }
 @keyframes game {
-  0%   {top: 0px; left: 0px;}
-  25%  {top: 200px;left: 200px;}
-  75%  {top: 50px;left: 500px;}
-  100% {top: 100px;left: 700px;}
+  0%   {<?php topbot();  ?>}
+  25%  {<?php topbot();  ?>}
+  75%  {<?php topbot();  ?>}
+  100% {<?php topbot();  ?>}
+}
+
+#div-win
+{	font-family: 'Calligraffitti', cursive;
+	display:flex;
+	flex-direction :column;
+	align-items:center;	
+	display: <?php echo $dispwin ;?>!important;
 }
 
 #jeu
@@ -125,8 +168,8 @@ footer{
 	color: rgba(0, 0, 0, 0);
 	width:100px;
 	height: 100px;
-	background-image: url('https://www.ifop.com/wp-content/uploads/2019/10/kebabb.jpg');
+	background-image: url('image/<?php echo $_SESSION['game'] ;?>.jpg');
 	background-size: 100% 100%;
-	animation: game 10s infinite alternate;
+	animation: game <?php echo $seconde;?>s infinite alternate;
 
 }

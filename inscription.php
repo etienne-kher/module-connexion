@@ -1,4 +1,4 @@
-<a class="lien-bout ac" href="index.php">acceuille</a>
+<a class="lien-bout ac" href="index.php">accueil</a>
 </header>
 
 	<form class="form-ins" action="index.php" method="post">

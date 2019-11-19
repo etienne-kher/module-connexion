@@ -19,11 +19,11 @@
 			{
 				if($_POST['mdp']!=$_POST['remdp'])
 				{
-					$erreur="<b>mots de passe et confirmation de mots de passe différent</b>";
+					$erreur="<u>mots de passe et confirmation de mots de passe différent</u>";
 				}
 				else
 				{
-					$erreur="<b>login deja pris essayer ".$_POST['login']."123</b> ";
+					$erreur="<u>login deja pris essayer ".$_POST['login']."123</u> ";
 				}
 					echo $erreur;
 
@@ -41,7 +41,7 @@
 	</form>
 	<a class="lien-bout ac" href="index.php">accueil</a>
 	<form action="index.php" method="post">
-		<input class="lien-bout" type="submit" name="dem-insc" value="Crée un compte">
+		<input class="lien-bout" type="submit" name="dem-insc" value="Inscription">
 	</form>
 </header>
 <main>
