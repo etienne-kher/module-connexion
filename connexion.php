@@ -37,9 +37,9 @@
 			<input type="text" name="login" placeholder="login">
 			<input type="password" name="mdp" placeholder="Mot de passe">
 		</div>
-		<input type="submit" name="env-con">
+		<input class="val" type="submit" value="Se Connécté" name="env-con">
 	</form>
-	<a class="lien-bout ac" href="index.php">acceuille</a>
+	<a class="lien-bout ac" href="index.php">accueil</a>
 	<form action="index.php" method="post">
 		<input class="lien-bout" type="submit" name="dem-insc" value="Crée un compte">
 	</form>

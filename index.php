@@ -6,8 +6,8 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-	<title>bon site sa mére</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Piéger dans l'index</title>
+	<link rel="stylesheet" type="text/css" href="style.php">
 </head>
 <body>
 	<header>
@@ -94,13 +94,31 @@ else
 				include('admin.php');
 			}
 			else{
+				if(isset($_POST['lejeu']))
+				{
+					$_SESSION['game']++;	
+				}
+				else
+				{
+					$_SESSION['game']=1;
+				}
+					
+				
+					$niv="niv ".$_SESSION['game'];	
 				
 				echo "	<main>
-						<div>
-							<p></p>
+						<p>Grab the kebab $niv </p>
+						<div id=\"jeu-div\">
+
+							<form method=\"post\" action=\"index.php\">
+								<input id=\"jeu\" type=\"submit\" name=\"lejeu\" >
+							</form>
+							
 						</div>
 					</main>
 					";
+				
+					
 			}
 			
 		}

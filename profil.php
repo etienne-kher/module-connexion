@@ -64,9 +64,9 @@
 		 ?>
 
 	<form class="form-ins" action="index.php" method="post">
-		<label>Nom :</label><input type="text" name="nom" value="<?php echo $_SESSION['nom'];?>">
-		<label>Prenom :</label><input type="text" name="prenom" value="<?php echo $_SESSION['prenom'];?>">
-		<label>login :</label><input type="text" name="login" value="<?php echo $_SESSION['login'];?>">
+		<label>Nom :</label><input type="text" name="nom" value="<?php echo $_SESSION['nom'];?>" required>
+		<label>Prenom :</label><input type="text" name="prenom" value="<?php echo $_SESSION['prenom'];?>" required>
+		<label>login :</label><input type="text" name="login" value="<?php echo $_SESSION['login'];?>" required>
 		<label>Nouveau mot de passe :</label><input type="password" name="nouvmdp">
 		<label>Confirmer mot de passe :</label><input type="password" name="remdp">
 		<label>Mot de passe :</label><input type="password" name="mdp" required>
