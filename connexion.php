@@ -37,7 +37,7 @@
 			<input type="text" name="login" placeholder="login">
 			<input type="password" name="mdp" placeholder="Mot de passe">
 		</div>
-		<input class="val" type="submit" value="Se Connécté" name="env-con">
+		<input class="val" type="submit" value="Se Connecté" name="env-con">
 	</form>
 	<a class="lien-bout ac" href="index.php">accueil</a>
 	<form action="index.php" method="post">

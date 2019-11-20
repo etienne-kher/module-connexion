@@ -55,6 +55,7 @@ header{
 	width: 100%;
 	padding-top:1%;
 	padding-bottom:1%;
+	border-bottom: 3px solid #fed500;
 
 }
 .lien-bout{
@@ -109,6 +110,8 @@ b{
 #connexion{
 	display: flex;
 	flex-direction: column;
+	height: 60px;
+	justify-content: space-around;
 }
 main{
 	display: flex;
@@ -118,6 +121,9 @@ main{
 }
 p{
 	font-family: 'Faster One', cursive;
+	color: #fed500;
+	text-shadow: 1px 1px 1px black;
+
 }
 .form-ins{
 
@@ -134,7 +140,10 @@ footer{
 	text-align: center;
 	width: 100%;
 	background-color: #dc1d1d;
+	color: #fed500;
 	font-family: 'Faster One', cursive;
+	text-shadow: 1px 1px 1px black;
+	border-top: 3px solid #fed500;
 }
 
 #jeu-div
@@ -146,6 +155,8 @@ footer{
     width: 800px;
     height: 350px;
     display: <?php echo $disp ;?>
+    border: 3px solid #fed500;
+	border-radius: 10px;
 
 }
 @keyframes game {
@@ -171,5 +182,8 @@ footer{
 	background-image: url('image/<?php echo $_SESSION['game'] ;?>.jpg');
 	background-size: 100% 100%;
 	animation: game <?php echo $seconde;?>s infinite alternate;
+	border: none;
+	border-radius: 90px;
+	border: 3px solid #fed500;
 
 }

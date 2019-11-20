@@ -7,6 +7,7 @@ session_start();
 <html>
 <head>
 	<title>Piéger dans l'index</title>
+	<link rel="icon" type="image/png" href="image/favicon.png" />
 	<link href="https://fonts.googleapis.com/css?family=Calligraffitti|Faster+One&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style.php">
 </head>
@@ -83,7 +84,7 @@ else
 		}
 
 		if(isset($_SESSION['login']))
-		{	echo"<div class=\"lien-bout ac bon\">connécté :<br>".$_SESSION['login']."</div><form method=\"post\" action=\"index.php\">
+		{	echo"<div class=\"lien-bout ac bon\">Connecté :<br>".$_SESSION['login']."</div><form method=\"post\" action=\"index.php\">
 							<input class=\"lien-bout\" type=\"submit\" name=\"mod\" value=\"modifier\">
 						</form>
 					<form method=\"post\" action=\"index.php\">
