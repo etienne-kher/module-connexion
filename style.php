@@ -160,6 +160,7 @@ u{
 	margin-bottom: 50px;
 }
 footer{
+	margin-top:2%;
 	padding-top:2%;
 	padding-bottom: 2%; 
 	text-align: center;
@@ -203,7 +204,7 @@ footer{
 	display: <?php echo $dispwin ;?>;
 	font-size: 160%;
 }
-#homer
+.img
 {
 	border: 3px solid #fed500;
 	border-radius: 10px;

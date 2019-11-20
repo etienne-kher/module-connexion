@@ -20,7 +20,7 @@ mysqli_close($bd);
 ?>
 <form class="form-ins" action="index.php" method="post">
 	<label>suprimer un utilisateur :</label>
-	<input type="number" name="idsup" placeholder="Id">
-	<input type="submit" name="supr" value="Ejecter !">	
+	<input type="number" name="idsup" placeholder="Id" required>
+	<input class="val" type="submit" name="supr" value="Ejecter !">	
 </form>
 <!-- milieu !-->

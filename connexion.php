@@ -37,7 +37,7 @@
 			<input type="text" name="login" placeholder="login">
 			<input type="password" name="mdp" placeholder="Mot de passe">
 		</div>
-		<input class="val" type="submit" value="Se Connecté" name="env-con">
+		<input class="val" type="submit" value="Se Connecter" name="env-con">
 	</form>
 	<a class="lien-bout ac" href="index.php">accueil</a>
 	<form action="index.php" method="post">
@@ -45,8 +45,7 @@
 	</form>
 </header>
 <main>
-	<div>
-		mais a quoi peut bien servire ce site?
-	</div>	
+	<p>Le Site Du Bon Kebab</p>
+	<img class="img" src="image/kebab.jpg">	
 </main>
 <!-- header !--> 

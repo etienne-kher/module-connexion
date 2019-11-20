@@ -6,7 +6,7 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Piéger dans l'index</title>
+	<title>Piégé dans l'index</title>
 	<link rel="icon" type="image/png" href="image/favicon.png" />
 	<link href="https://fonts.googleapis.com/css?family=Calligraffitti|Faster+One&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style.php">
@@ -109,7 +109,7 @@ else
 					$niv="niv ".$_SESSION['game'];
 					if($_SESSION['game']>10)
 					{
-						$niv="WINER !!!";
+						$niv="WINNER !!!";
 					}	
 				
 				echo "	<main>
@@ -123,7 +123,7 @@ else
 						</div>
 						<div id=\"div-win\">
 							<h>Merci Chef</h>
-							<img id=\"homer\" src=\"image/win.gif\" >  
+							<img class=\"img\" src=\"image/win.gif\" >  
 						</div>
 					</main>
 					";
