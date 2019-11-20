@@ -106,7 +106,7 @@ else
 				}
 					
 				
-					$niv="niv ".$_SESSION['game'];
+					$niv="niveau ".$_SESSION['game'];
 					if($_SESSION['game']>10)
 					{
 						$niv="WINNER !!!";

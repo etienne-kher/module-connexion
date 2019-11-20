@@ -70,7 +70,7 @@
 		<label>Nouveau mot de passe :</label><input class="inp-form" type="password" name="nouvmdp">
 		<label>Confirmer mot de passe :</label><input class="inp-form" type="password" name="remdp">
 		<label>Mot de passe :</label><input class="inp-form" type="password" name="mdp" required>
-		<label>suprimer mon compte :-( </label><input type="checkbox" name="idsup" value="<?php echo $_SESSION['id'];?>" >
+		<label>supprimer mon compte :-( </label><input type="checkbox" name="idsup" value="<?php echo $_SESSION['id'];?>" >
 		<input class="val" type="submit" name="env-modif">
 	</form>	
 

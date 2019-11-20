@@ -221,6 +221,7 @@ footer{
 	border: none;
 	border-radius: 90px;
 	border: 3px solid #fed500;
+	box-shadow: 2px 2px 10px black;
 
 }
 table
