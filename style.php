@@ -11,7 +11,7 @@ function topbot()
 
 $disp="block;";
 $dispwin ="none;";
-
+if(isset($_SESSION['game'])){
 $niveau=$_SESSION['game'];
 $seconde=9-$niveau;
 if($niveau==9)
@@ -25,6 +25,7 @@ if($niveau==10)
 if($niveau>10)
 {	$dispwin ="flex;";
 	$disp="none;";
+}
 }
 header('content-type: text/css'); 
 
@@ -91,6 +92,7 @@ header{
 }
 
 .val{
+	margin-top:1%;
 	border:none;
     background-color: #8ea709;
     color: white;
@@ -102,10 +104,13 @@ header{
     text-shadow: 1px 1px 1px black;
     height: 25px;
 }
-b{
+b{	
+	color: #fed500;
+	text-shadow: 1px 1px 1px black;
+	font-family: 'Calligraffitti', cursive;
 	position: absolute;
-    top: 70px;
-    left: 275px;
+    top: 10%;
+    left: 30%;
 }
 #connexion{
 	display: flex;
@@ -123,17 +128,37 @@ p{
 	font-family: 'Faster One', cursive;
 	color: #fed500;
 	text-shadow: 1px 1px 1px black;
+	font-size: 120%;
 
 }
 .form-ins{
-
+	background-color: #dc1d1d;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	animation: rotation 0.7s 1;
+	border: 3px solid #fed500;
+	border-radius: 10px;
+	box-shadow: 4px 4px 10px black;
+	padding: 50px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    font-size: 20px;
+    color: #fed500;
+	text-shadow: 1px 1px 1px black;
+	font-family: 'Calligraffitti', cursive;
 
 }
-u{color:red;}
+
+.inp-form
+{
+	font-size: 20px;
+	margin:6%;
+}
+u{
+	color:red;
+	margin-bottom: 50px;
+}
 footer{
 	padding-top:2%;
 	padding-bottom: 2%; 
@@ -148,7 +173,7 @@ footer{
 
 #jeu-div
 {
-	background-image: url('image/<?php echo $_SESSION['game'] ;?>.jpg');
+	background-image: url('image/<?php if(isset($_SESSION['game'])) {echo $_SESSION['game'] ;}?>.jpg');
     background-position: center;
 	background-repeat: no-repeat;
 	background-size: 100%;
@@ -157,33 +182,54 @@ footer{
     display: <?php echo $disp ;?>
     border: 3px solid #fed500;
 	border-radius: 10px;
+	box-shadow: 4px 4px 10px black;
 
 }
 @keyframes game {
   0%   {<?php topbot();  ?>}
   25%  {<?php topbot();  ?>}
+  50%  {<?php topbot();  ?>}
   75%  {<?php topbot();  ?>}
   100% {<?php topbot();  ?>}
 }
 
 #div-win
-{	font-family: 'Calligraffitti', cursive;
+{	color: #fed500;
+	text-shadow: 1px 1px 1px black;
+	font-family: 'Calligraffitti', cursive;
 	display:flex;
 	flex-direction :column;
 	align-items:center;	
-	display: <?php echo $dispwin ;?>!important;
+	display: <?php echo $dispwin ;?>;
+	font-size: 160%;
 }
-
+#homer
+{
+	border: 3px solid #fed500;
+	border-radius: 10px;
+	box-shadow: 4px 4px 10px black;
+}
 #jeu
 {	position: relative;
 	color: rgba(0, 0, 0, 0);
 	width:100px;
 	height: 100px;
-	background-image: url('image/<?php echo $_SESSION['game'] ;?>.jpg');
+	background-image: url('image/<?php if(isset($_SESSION['game'])) { echo $_SESSION['game'] ;}?>.jpg');
 	background-size: 100% 100%;
-	animation: game <?php echo $seconde;?>s infinite alternate;
+	animation: game <?php if(isset($_SESSION['game'])) {echo $seconde;}?>s infinite alternate;
 	border: none;
 	border-radius: 90px;
 	border: 3px solid #fed500;
 
+}
+table
+{	background-color: #dc1d1d;
+	color: #fed500;
+	text-shadow: 1px 1px 1px black;
+	padding:2%;
+	margin-top: 100px;
+    margin-bottom: 100px;
+	border: 3px solid #fed500;
+	border-radius: 10px;
+	box-shadow: 4px 4px 10px black;
 }

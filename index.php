@@ -123,8 +123,7 @@ else
 						</div>
 						<div id=\"div-win\">
 							<h>Merci Chef</h>
-							<img src=\"image/win.gif\" >  
-
+							<img id=\"homer\" src=\"image/win.gif\" >  
 						</div>
 					</main>
 					";

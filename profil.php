@@ -64,14 +64,14 @@
 		 ?>
 
 	<form class="form-ins" action="index.php" method="post">
-		<label>Nom :</label><input type="text" name="nom" value="<?php echo $_SESSION['nom'];?>" required>
-		<label>Prenom :</label><input type="text" name="prenom" value="<?php echo $_SESSION['prenom'];?>" required>
-		<label>login :</label><input type="text" name="login" value="<?php echo $_SESSION['login'];?>" required>
-		<label>Nouveau mot de passe :</label><input type="password" name="nouvmdp">
-		<label>Confirmer mot de passe :</label><input type="password" name="remdp">
-		<label>Mot de passe :</label><input type="password" name="mdp" required>
+		<label>Nom :</label><input class="inp-form" type="text" name="nom" value="<?php echo $_SESSION['nom'];?>" required>
+		<label>Prenom :</label><input class="inp-form" type="text" name="prenom" value="<?php echo $_SESSION['prenom'];?>" required>
+		<label>Login :</label><input class="inp-form" type="text" name="login" value="<?php echo $_SESSION['login'];?>" required>
+		<label>Nouveau mot de passe :</label><input class="inp-form" type="password" name="nouvmdp">
+		<label>Confirmer mot de passe :</label><input class="inp-form" type="password" name="remdp">
+		<label>Mot de passe :</label><input class="inp-form" type="password" name="mdp" required>
 		<label>suprimer mon compte :-( </label><input type="checkbox" name="idsup" value="<?php echo $_SESSION['id'];?>" >
-		<input type="submit" name="env-modif">
+		<input class="val" type="submit" name="env-modif">
 	</form>	
 
 	<?php 

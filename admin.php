@@ -18,7 +18,7 @@ foreach ($reception as $user)
 echo "</table>";
 mysqli_close($bd);
 ?>
-<form action="index.php" method="post">
+<form class="form-ins" action="index.php" method="post">
 	<label>suprimer un utilisateur :</label>
 	<input type="number" name="idsup" placeholder="Id">
 	<input type="submit" name="supr" value="Ejecter !">	
